@@ -4,7 +4,7 @@ import 'dart:developer';
 import 'package:dio/dio.dart';
 import 'package:taskapp/model/taskmodel.dart';
 
-class TaskService {
+class UserService {
  
   final Dio dio = Dio(
     BaseOptions(baseUrl: "https://jsonplaceholder.typicode.com"),
