@@ -7,7 +7,8 @@ import 'package:taskapp/model/taskmodel.dart';
 class UserService {
  
   final Dio dio = Dio(
-    BaseOptions(baseUrl: "https://jsonplaceholder.typicode.com"),
+    BaseOptions(baseUrl: "https://jsonplaceholder.typicode.com"
+    , headers: {"Accept":"application/json"}  ),
   );
 
   Future<List<User>> getUser() async {
