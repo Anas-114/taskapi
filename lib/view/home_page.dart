@@ -25,7 +25,7 @@ class _HomePageState extends State<HomePage> {
             fontWeight: FontWeight.bold,
           ),
         ),
-        backgroundColor: Colors.limeAccent.shade200,
+        backgroundColor: Colors.teal.shade300,
       ),
       body: RefreshIndicator(
         child: checkBody(provider),
@@ -150,14 +150,16 @@ Widget checkBody(UserProvider provider) {
 
 Widget customCard(String username, String email, String phone) {
   return Card(
-    child: Column(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-        Center(
-          child: Text(
+    color: Colors.teal.shade300,
+    child: Padding(
+      padding: EdgeInsets.all(16.0),
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Text(
             username,
             style: GoogleFonts.oswald(
-              fontSize: 20,
+              fontSize: 24,
               fontWeight: FontWeight.bold,
               color: Colors.black87,
             ),
@@ -165,36 +167,32 @@ Widget customCard(String username, String email, String phone) {
             maxLines: 2,
             overflow: TextOverflow.ellipsis,
           ),
-        ),
-        SizedBox(height: 8),
-        Center(
-          child: Text(
+          SizedBox(height: 8),
+          Text(
             email,
             style: GoogleFonts.oswald(
-              fontSize: 20,
-              fontWeight: FontWeight.bold,
-              color: Colors.black87,
+              fontSize: 16,
+              fontWeight: FontWeight.w500,
+              color: Colors.black54,
             ),
             textAlign: TextAlign.center,
             maxLines: 2,
             overflow: TextOverflow.ellipsis,
           ),
-        ),
-        SizedBox(height: 8),
-        Center(
-          child: Text(
+          SizedBox(height: 8),
+          Text(
             phone,
             style: GoogleFonts.oswald(
-              fontSize: 20,
-              fontWeight: FontWeight.bold,
-              color: Colors.black87,
+              fontSize: 16,
+              fontWeight: FontWeight.w500,
+              color: Colors.black54,
             ),
             textAlign: TextAlign.center,
             maxLines: 2,
             overflow: TextOverflow.ellipsis,
           ),
-        ),
-      ],
+        ],
+      ),
     ),
   );
 }
